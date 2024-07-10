@@ -1,3 +1,7 @@
+:root {
+  --text-color: #fff;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

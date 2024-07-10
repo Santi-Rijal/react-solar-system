@@ -2,36 +2,46 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "./Planet.module.scss";
-import data from "@/data/data";
 import { Canvas, useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
 import { OrbitControls } from "@react-three/drei";
 import { usePlanetContext } from "@/Context/PlanetContext";
+import { Texture, TextureLoader } from "three";
 
 const Planet = () => {
   const { planet } = usePlanetContext();
 
-  const planetTexture = useLoader(TextureLoader, planet?.texture);
+  const [loading, setLoading] = useState(true);
+  const [texture, setTexture] = useState("");
 
-  console.log(planetTexture);
+  useEffect(() => {
+    const load = () => {
+      const texturePath = `/${planet?.texture}`;
+      const texture = new TextureLoader().load(texturePath);
+      setTexture(texture);
+      setLoading(false);
+    };
+
+    load();
+  }, [planet]);
 
   return (
-    <div className={styles.canvasContainer}>
-      <h1 className={styles.planetName}>{planet?.planet}</h1>
-      <Canvas>
-        <mesh>
-          <sphereGeometry args={[2, 40, 40]} />
-          <meshBasicMaterial map={planetTexture} />
-        </mesh>
+    !loading && (
+      <div className={styles.canvasContainer}>
+        <Canvas>
+          <mesh>
+            <sphereGeometry args={[2, 40, 40]} />
+            <meshBasicMaterial map={texture} />
+          </mesh>
 
-        <OrbitControls
-          enableRotate={true}
-          enableDamping={true}
-          minDistance={3.5}
-          maxDistance={8}
-        />
-      </Canvas>
-    </div>
+          <OrbitControls
+            enableRotate={true}
+            enableDamping={true}
+            minDistance={3.5}
+            maxDistance={8}
+          />
+        </Canvas>
+      </div>
+    )
   );
 };
 

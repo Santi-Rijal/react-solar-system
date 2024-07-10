@@ -22,6 +22,7 @@ const PlanetDashboard = () => {
     <div>
       {nav.map((navItem) => (
         <Link
+          key={navItem}
           href={`planetDashboard/${navItem}`}
           onClick={() => nameChange(navItem)}
         >

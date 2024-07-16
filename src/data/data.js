@@ -34,7 +34,7 @@ const data = [
         amount: 1,
         names: ["Moon"],
       },
-      rings: "None",
+      rings: 0,
       time: {
         lengthOfDay: "~24 h",
         lengthOfYear: "~365 days",
@@ -78,7 +78,7 @@ const data = [
         amount: 2,
         names: ["Phobos", "Deimos"],
       },
-      rings: "None",
+      rings: 0,
     },
     time: {
       lengthOfDay: "24.6 h",
@@ -117,7 +117,7 @@ const data = [
         amount: 0,
         names: [],
       },
-      rings: "None",
+      rings: 0,
     },
     time: {
       lengthOfDay: "243 Earth days",
@@ -157,7 +157,7 @@ const data = [
         amount: 95,
         names: ["Io", "Europa", "Ganymede", "Callisto"],
       },
-      rings: "Yes",
+      rings: 4,
     },
     time: {
       lengthOfDay: "10 h",
@@ -197,7 +197,7 @@ const data = [
         amount: 16,
         names: ["Triton", "Nereid", "Proteus", "Larissa"],
       },
-      rings: "6",
+      rings: 6,
     },
     time: {
       lengthOfDay: "16 h",
@@ -234,7 +234,7 @@ const data = [
         amount: 0,
         names: [],
       },
-      rings: "None",
+      rings: 0,
     },
     time: {
       lengthOfDay: "176 Earth days",
@@ -274,7 +274,7 @@ const data = [
         amount: 28,
         names: [],
       },
-      rings: "2",
+      rings: 13,
     },
     time: {
       lengthOfDay: "17 h",
@@ -287,7 +287,7 @@ const data = [
     planet: "Saturn",
     texture: "saturn_texture.png",
     funFact:
-      "Jupiter – the sixth planet from the Sun – it’s the second-largest. It’s surrounded by beautiful rings.",
+      "Saturn – the sixth planet from the Sun – it’s the second-largest. It’s surrounded by beautiful rings.",
     age: `4.503 billion years`,
     namesake:
       "Saturn, named after the Roman god of agriculture and wealth, who was also the father of Jupiter",
@@ -315,7 +315,7 @@ const data = [
         amount: 146,
         names: ["Titan", "Enceladus", "Hyperion", "Prometheus"],
       },
-      rings: "9",
+      rings: 8,
     },
     time: {
       lengthOfDay: "10.7 h",

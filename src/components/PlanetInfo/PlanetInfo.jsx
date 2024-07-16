@@ -9,7 +9,10 @@ const PlanetInfo = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.planet}>{planet?.planet}</h1>
+      <section>
+        {/* <h1 className={styles.planet}>{planet?.planet}</h1>
+        <h3 className={styles.planet}>{planet?.funFact}</h3> */}
+      </section>
     </div>
   );
 };

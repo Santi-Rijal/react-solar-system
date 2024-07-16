@@ -12,14 +12,14 @@ const Planet = () => {
 
   const [loading, setLoading] = useState(true);
   const [texture, setTexture] = useState("");
-  const [ringTexture, setRingTexture] = useState("");
+  const [ringTexture, setRingTexture] = useState(null);
 
   useEffect(() => {
     const load = () => {
       const texturePath = `/${planet?.texture}`;
       const texture = new TextureLoader().load(texturePath);
 
-      if (planet?.atmosphere?.rings !== "") {
+      if (planet?.rings?.num !== 0 && planet?.rings?.hasTexture) {
         const path = `/${planet?.planet.toLowerCase()}_rings_texture.png`;
         const ringTexture = new TextureLoader().load(path);
         ringTexture.rotation = Math.PI / 2;
@@ -51,7 +51,7 @@ const Planet = () => {
             maxDistance={8}
           />
 
-          {planet?.atmosphere?.rings !== 0 && (
+          {ringTexture !== null && (
             <mesh rotation-x={Math.PI / 2}>
               <torusGeometry args={[4, 1.5, 2.2, 100]} />
               <meshBasicMaterial map={ringTexture} />

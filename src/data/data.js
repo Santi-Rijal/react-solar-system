@@ -1,5 +1,3 @@
-import { PiPlusMinus } from "react-icons/pi";
-
 const data = [
   {
     id: 0,
@@ -7,7 +5,7 @@ const data = [
     texture: "earth_texture.png",
     funFact:
       "Earth – our home planet – is the third planet from the Sun, and the fifth largest planet. It's the only place we know of inhabited by living things.",
-    age: `4.54 billion years, ${(<PiPlusMinus />)} 50 million years`,
+    age: `4.54 billion years`,
     namesake:
       "The name Earth is a Germanic word, which simply means “the ground.”",
     values: {
@@ -25,22 +23,24 @@ const data = [
         fahrenheit: "59",
       },
       windSpeeds: "0 to 100 m/s",
-      atmosphericComposition: {
+      majorAtmosphericComposition: {
         nitrogen: 78,
         oxygen: 21,
-        otherGases: 1,
       },
-      moons: {
-        amount: 1,
-        names: ["Moon"],
-      },
-      rings: 0,
-      time: {
-        lengthOfDay: "~24 h",
-        lengthOfYear: "~365 days",
-      },
-      water: "70% of the surface",
     },
+    moons: {
+      amount: 1,
+      names: ["Moon"],
+    },
+    rings: {
+      num: 0,
+      hasTexture: false,
+    },
+    time: {
+      lengthOfDay: "~24 h",
+      lengthOfYear: "~365 days",
+    },
+    water: "70% of the surface",
   },
   {
     id: 1,
@@ -58,9 +58,7 @@ const data = [
       surfaceGravity: "3.73 m/s^2",
     },
     atmosphere: {
-      surfacePressure: `6.36 mb ${(
-        <PiPlusMinus />
-      )} 4.0 to 8.7 mb depending on season`,
+      surfacePressure: `6.36 mb plus minus 4.0 to 8.7 mb depending on season`,
       surfaceDensity: "~0.020 kg/m^3",
       averageTemperature: {
         kelvin: "184 to 242",
@@ -74,11 +72,14 @@ const data = [
         argon: 2,
         otherGases: 0.4,
       },
-      moons: {
-        amount: 2,
-        names: ["Phobos", "Deimos"],
-      },
-      rings: 0,
+    },
+    moons: {
+      amount: 2,
+      names: ["Phobos", "Deimos"],
+    },
+    rings: {
+      num: 0,
+      hasTexture: false,
     },
     time: {
       lengthOfDay: "24.6 h",
@@ -113,11 +114,14 @@ const data = [
         carbonDioxide: 96.5,
         nitrogen: 3.5,
       },
-      moons: {
-        amount: 0,
-        names: [],
-      },
-      rings: 0,
+    },
+    moons: {
+      amount: 0,
+      names: [],
+    },
+    rings: {
+      num: 0,
+      hasTexture: false,
     },
     time: {
       lengthOfDay: "243 Earth days",
@@ -153,11 +157,14 @@ const data = [
         molecularHydrogen: 90,
         helium: 10,
       },
-      moons: {
-        amount: 95,
-        names: ["Io", "Europa", "Ganymede", "Callisto"],
-      },
-      rings: 4,
+    },
+    moons: {
+      amount: 95,
+      names: ["Io", "Europa", "Ganymede", "Callisto"],
+    },
+    rings: {
+      num: 4,
+      hasTexture: false,
     },
     time: {
       lengthOfDay: "10 h",
@@ -193,11 +200,14 @@ const data = [
         helium: 19,
         methane: 1,
       },
-      moons: {
-        amount: 16,
-        names: ["Triton", "Nereid", "Proteus", "Larissa"],
-      },
-      rings: 6,
+    },
+    moons: {
+      amount: 16,
+      names: ["Triton", "Nereid", "Proteus", "Larissa"],
+    },
+    rings: {
+      num: 6,
+      hasTexture: false,
     },
     time: {
       lengthOfDay: "16 h",
@@ -230,11 +240,14 @@ const data = [
       },
       windSpeeds: "0 m/s",
       majorAtmosphericComposition: {},
-      moons: {
-        amount: 0,
-        names: [],
-      },
-      rings: 0,
+    },
+    moons: {
+      amount: 0,
+      names: [],
+    },
+    rings: {
+      num: 0,
+      hasTexture: false,
     },
     time: {
       lengthOfDay: "176 Earth days",
@@ -270,11 +283,14 @@ const data = [
         helium: 15.2,
         methane: 2.3,
       },
-      moons: {
-        amount: 28,
-        names: [],
-      },
-      rings: 13,
+    },
+    moons: {
+      amount: 28,
+      names: [],
+    },
+    rings: {
+      num: 13,
+      hasTexture: false,
     },
     time: {
       lengthOfDay: "17 h",
@@ -311,11 +327,14 @@ const data = [
         molecularHydrogen: 96.75,
         helium: 3.25,
       },
-      moons: {
-        amount: 146,
-        names: ["Titan", "Enceladus", "Hyperion", "Prometheus"],
-      },
-      rings: 8,
+    },
+    moons: {
+      amount: 146,
+      names: ["Titan", "Enceladus", "Hyperion", "Prometheus"],
+    },
+    rings: {
+      num: 8,
+      hasTexture: true,
     },
     time: {
       lengthOfDay: "10.7 h",
